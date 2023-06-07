@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #9e2f02;
+  --secondary: #149983;
+  --light: #ffffff;
+  --light-1: #f8faff;
+  --light--1: #ede8e8;
+  --yellow: #fcff60;
+  --purple: #ff49ff;
+  --orange: #ffcb8e;
+  --green: #aeffb6;
+  --success: #8bff97;
+  --danger: #fb9292;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.063rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--light);
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.438rem;
+}
+
+h6 {
+  font-size: 1.188rem;
+}
+
+h4,
+h5,
+h6 {
+  color: var(--light);
+  line-height: 120%;
+}
+
+p,
+a {
+  font-size: 1rem;
+}
+
+span {
+  font-size: 0.875rem;
+}
+
+p,
+a,
+span {
+  color: var(--light);
+  line-height: 150%;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: Montserrat, sans-serif;
+}

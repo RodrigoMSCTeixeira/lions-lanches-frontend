@@ -1,11 +1,6 @@
 <template>
-  <div class="col-md-12">
+  <div class="form-login col-md-12">
     <div class="card card-container">
-      <!-- <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-      /> -->
       <Form @submit="handleLogin" :validation-schema="schema">
         <div class="form-group">
           <label for="email">Email</label>
@@ -17,14 +12,13 @@
           <Field name="password" type="password" class="form-control" />
           <ErrorMessage name="password" class="error-feedback" />
         </div>
-
         <div class="form-group">
           <button class="btn btn-primary btn-block" :disabled="loading">
             <span
               v-show="loading"
               class="spinner-border spinner-border-sm"
             ></span>
-            <span>Login</span>
+            <span>Entrar</span>
           </button>
         </div>
 
@@ -99,3 +93,16 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .card {
+    padding: 25px;
+  }
+}
+</style>
