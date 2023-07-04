@@ -1,9 +1,12 @@
 import { createStore } from "vuex";
-import authUserModule from "./auth-module";
 import { AuthUserState } from "./auth-module/state";
+import { ListCompositeOrdersState } from "./list-orders-module/state";
+import authUserModule from "./auth-module";
+import listCompositeOrdersModule from "./list-orders-module";
 
 export interface StateInterface {
   authUser: AuthUserState;
+  listOrders: ListCompositeOrdersState;
 }
 export default createStore({
   // state: {},
@@ -12,5 +15,6 @@ export default createStore({
   // actions: {},
   modules: {
     authUser: authUserModule,
+    listOrders: listCompositeOrdersModule,
   },
 });

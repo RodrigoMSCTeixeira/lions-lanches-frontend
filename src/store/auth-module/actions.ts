@@ -5,7 +5,6 @@ import AuthService from "@/services/auth.service";
 
 const actions: ActionTree<AuthUserState, StateInterface> = {
   login: ({ commit }, user) => {
-    console.log(user);
     return AuthService.login(user).then(
       (user) => {
         commit("loginSuccess", user);

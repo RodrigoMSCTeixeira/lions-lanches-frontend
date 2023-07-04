@@ -77,7 +77,7 @@ export default defineComponent({
       this.loading = true;
       this.$store.dispatch("authUser/login", user).then(
         () => {
-          this.$router.push("/about");
+          this.$router.push("/dashboard");
         },
         (error: any) => {
           this.loading = false;
