@@ -8,6 +8,13 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
 
 import Link from "next/link";
+import { canSSRGuest } from "../utils/canSSRGuests";
+
+export const getServerSideProps = canSSRGuest(async(context) => {
+  return {
+    props: {}
+  }
+})
 
 export default function Home() {
   const { singIn } = useContext(AuthContext);

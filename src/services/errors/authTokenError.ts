@@ -4,4 +4,4 @@ class AuthTokenError extends Error {
   }
 }
 
-export default new AuthTokenError();
+export default AuthTokenError;
