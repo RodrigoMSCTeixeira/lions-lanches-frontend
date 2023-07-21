@@ -2,12 +2,34 @@ import { FormEvent, useState } from "react";
 import Head from "next/head";
 import { Header } from "@/src/components/Header";
 import styles from "./styles.module.scss";
+import { setupApiClient } from "@/src/services/api";
+import { toast } from "react-toastify";
+import { canSSRAuth } from "@/src/utils/canSSRAuth";
+
+export const getServerSideProps = canSSRAuth(async (context) => {
+  return {
+    props: {},
+  };
+});
 
 export default function Category() {
   const [name, setName] = useState("");
 
   const handleRegister = async (event: FormEvent) => {
     event.preventDefault();
+
+    if (name === "") {
+      return;
+    }
+
+    const apiClient = setupApiClient();
+    await apiClient.post("/category", {
+      name: name,
+    });
+
+    toast.success("Categoria cadastrada com sucesso!");
+
+    setName("");
   };
 
   return (
